@@ -32,7 +32,8 @@ class CatFact extends React.Component {
   //   return React.addons.PureRenderMixin.shouldComponentUpdate.apply(this, arguments);
   // }
 
-  getCatFact() {
+  getCatFact() {    
+    console.log('bakl');
     let http = require('http');
     let  url = "/api/facts";
 
@@ -51,7 +52,10 @@ class CatFact extends React.Component {
    */
   render () {
     console.log('render called');
-    return (<p>{this.state.fact}</p>);
+    return (<div><p>{this.state.fact}</p> 
+      <button onClick={(e) => this.getCatFact()}>moar meow</button>
+      </div>
+      );
   }
 }
 
