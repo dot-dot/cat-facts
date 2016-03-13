@@ -16,4 +16,5 @@ If you are getting an error related to node-gyp when building your bundle.js:
 
 Based on:
 https://blog.risingstack.com/the-react-way-getting-started-tutorial/
+
 https://scotch.io/tutorials/learning-react-getting-started-and-concepts
