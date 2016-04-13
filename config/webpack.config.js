@@ -1,4 +1,5 @@
 var path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
   entry: path.resolve(__dirname, '../src/client/scripts/client.js'),
@@ -6,7 +7,14 @@ module.exports = {
     path: path.resolve(__dirname, '../dist'),
     filename: 'bundle.js'
   },
-  devtool: 'eval',
+  devtool: 'cheap-module-source-map',
+  plugins: [
+	  new webpack.DefinePlugin({
+		'process.env': {
+		  'NODE_ENV': JSON.stringify('production')
+		}
+	  })
+  ],
   module: {
     preLoaders: [
            {

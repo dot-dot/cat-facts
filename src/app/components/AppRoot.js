@@ -27,7 +27,7 @@ class AppRoot extends React.Component {
    */
   render () {
     return <div className="appRoot">
-      <h1>{config.title}</h1>
+      <h4>{config.title}</h4>
       <CatFact />
     </div>;
   }
