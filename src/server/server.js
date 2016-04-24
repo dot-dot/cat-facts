@@ -17,8 +17,8 @@ app.get('/', (req, res) => {
 app.get('/api/facts', (req, res) => {
   var getCatFact = (res) => {
     let http = require('http');
-    let url = "http://catfacts-api.appspot.com/api/facts";
-
+    let url = "http://catfacts-api.appspot.com/api/facts?number=20";
+        
     var request = http.get(url, (response) => {
       response.on('data', (data) => {
         res.json(JSON.parse(data.toString()));
